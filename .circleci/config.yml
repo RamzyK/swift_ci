@@ -22,6 +22,6 @@ jobs:
           path: output/scan
 
 workflows:
-  build-test-adhoc:
+  simple-worklfow:
     jobs:
       - build-and-test
