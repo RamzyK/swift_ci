@@ -2,7 +2,6 @@
 # https://docs.fastlane.tools/actions/scan/#scanfile
 
 scheme("sample_ci")
-sdk("iphonesimulator")
 #device("iPhone 14 Pro")
 open_report(true)
 code_coverage true
