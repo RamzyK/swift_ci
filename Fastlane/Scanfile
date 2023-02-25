@@ -2,9 +2,9 @@
 # https://docs.fastlane.tools/actions/scan/#scanfile
 
 scheme("sample_ci")
-#device("iPhone 14 Pro")
+device("iPhone 13 Pro")
 open_report(true)
 code_coverage true
 clean(true)
 # Enable skip_build to skip debug builds for faster test performance
-skip_build(true)
+#skip_build(true)
