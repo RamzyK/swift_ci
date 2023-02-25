@@ -9,6 +9,8 @@ platform :ios do
 	
     desc 'Build project and executes unit tests'
     lane :unit_test do |option|
-		scan
-   	end
+		scan(
+			include_simulator_logs: false
+		)
+   end
 end
