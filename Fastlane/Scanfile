@@ -3,3 +3,4 @@
 
 scheme("sample_ci")
 device("iPhone 13 Pro")
+include_simulator_logs(false)
