@@ -28,11 +28,11 @@ final class sample_ciTests: XCTestCase {
         XCTAssert(i == 0, "La variable \'i\' est supposée être égale à 0")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+//    func testPerformanceExample() throws {
+//        // This is an example of a performance test case.
+//        measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
 
 }
