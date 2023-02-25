@@ -9,6 +9,7 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
+      - run: bundle update --bundler
       - run: bundle install
       - run:
           name: Build and run tests
