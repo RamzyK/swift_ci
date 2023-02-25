@@ -9,9 +9,6 @@ platform :ios do
 	
     desc 'Build project and executes unit tests'
     lane :unit_test do |option|
-	scan(
-	  clean: option[:clean],
-	  skip_package_dependencies_resolution: option[:skip_package_dependencies_resolution]
-     )  
-   end
+		scan
+   	end
 end
