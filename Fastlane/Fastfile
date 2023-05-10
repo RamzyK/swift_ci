@@ -3,14 +3,17 @@ default_platform :ios
 
 platform :ios do
 
-	before_all do
+	before_all do		
     	setup_circle_ci
   	end
 	
-    desc 'Build project and executes unit tests'
-    lane :unit_test do |option|
+    desc 'Build project and executes unit tests on dev scheme'
+    lane :dev_unit_test do |option|
 		scan(
-			include_simulator_logs: false
+			include_simulator_logs: false,
+			scheme: "sample_ci",
+			only_testing: "sample_ciTests",
+			output_types: "html"
 		)
    end
 end

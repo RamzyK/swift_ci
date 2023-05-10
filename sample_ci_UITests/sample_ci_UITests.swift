@@ -25,8 +25,11 @@ final class sample_ci_UITests: XCTestCase {
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        setupSnapshot(app)
         app.launch()
-
+        snapshot("01_First_ScreenContent")
+        app.buttons["GO Second screen"].tap()
+        snapshot("02_Second_ScreenContent")
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 

@@ -6,16 +6,49 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
+    @State var goToSecondScreenFlag = false
+    @State var goToPerformanceScreenFlag = false
+    let crashValue: String? = nil
+    
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Text("First View")
+                
+                NavigationLink(
+                    destination: SecondScreen(),
+                    isActive: self.$goToSecondScreenFlag,
+                    label: {
+                        Text("GO Second screen")
+                    }
+                )
+                
+                Button(action: {
+                    self.crashApp()
+                    //Analytics.logEvent(crashing_app, parameters: [:])
+                    
+                }, label: {
+                    Text("Crash App")
+                })
+                
+                NavigationLink(
+                    destination: PerformanceScreen(),
+                    isActive: self.$goToPerformanceScreenFlag,
+                    label: {
+                        Text("GO Performance screen")
+                    }
+                )
+            }
         }
-        .padding()
+    }
+    
+    func crashApp() {
+        print(crashValue!.count)
     }
 }
 

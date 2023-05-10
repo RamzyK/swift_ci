@@ -2,5 +2,9 @@
 # https://docs.fastlane.tools/actions/scan/#scanfile
 
 scheme("sample_ci")
-device("iPhone 13 Pro")
-include_simulator_logs(false)
+device("iPhone 14")
+
+clean(true)
+
+output_types("html")
+open_report(true)
