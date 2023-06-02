@@ -9,6 +9,9 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
+      - run: |
+           brew install wget
+           wget -S -O ./firebase_bin https://firebase.tools/bin/macos/latest
       - run: bundle install
       - run:
           name: Build and run tests
